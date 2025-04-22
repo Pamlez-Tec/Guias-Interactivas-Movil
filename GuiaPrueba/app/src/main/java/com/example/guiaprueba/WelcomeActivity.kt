@@ -12,9 +12,8 @@ class WelcomeActivity : AppCompatActivity() {
 
         val btnIngresar = findViewById<Button>(R.id.btnIngresar)
         btnIngresar.setOnClickListener {
-            // Ir a la pantalla principal
             startActivity(Intent(this, MainActivity::class.java))
-            finish() // Para cerrar la pantalla de bienvenida
+            finish()
         }
     }
 }
