@@ -12,7 +12,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         val btnIngresar = findViewById<Button>(R.id.btnIngresar)
         btnIngresar.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AppTypeSelectionActivity::class.java))
             finish()
         }
     }
