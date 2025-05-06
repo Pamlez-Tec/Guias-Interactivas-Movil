@@ -84,6 +84,16 @@
             android:elevation="8dp"
             android:layout_marginBottom="100dp">
 
+            <!-- Botón de cerrar (X) -->
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:contentDescription="Cerrar tutorial" />
+
             <TextView
                 android:id="@+id/guideText"
                 android:layout_width="match_parent"

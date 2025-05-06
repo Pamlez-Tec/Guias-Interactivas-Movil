@@ -53,6 +53,11 @@
             val guideText = findViewById<TextView>(R.id.guideText)
             val btnNext = findViewById<ImageButton>(R.id.btnNext)
             val btnBack = findViewById<ImageButton>(R.id.btnBack)
+            val btnClose = findViewById<ImageButton>(R.id.btnClose)
+            btnClose.setOnClickListener {
+                guideOverlay.visibility = View.GONE
+            }
+
 
             val guideSteps = listOf(
                 "Bienvenido a la Guía de aplicaciones. Esperamos que su aprendizaje resulte agradable.\n\n" +
@@ -63,12 +68,10 @@
                         "al presionar la flecha que está en la parte inferior izquierda.",
 
                 "Los tutoriales solamente aparecerán una vez, esto le permetirá probar libremente las funciones que simula la app, " +
-                        "si desea volver a ver el tutorial de la sección en la que se encuentra, presione el botón señalado.",
+                        "si desea volver a ver el tutorial de la sección en la que se encuentra, presione el botón de signo de pregunta.",
 
                 "Organizamos los tutoriales en categorías que le ayudarán a encontrar más fácilmente el que desea realizar, para " +
-                        "elegir una categoría debe presionar el nombre que se encuentra en la barra de categorías. \n" +
-                        "Hay ocasiones en las que debe realizar una acción para avanzar en el tutorial, en este caso seleccione " +
-                        "la categoría Redes Sociales.",
+                        "elegir una categoría debe presionar el nombre que se encuentra en la barra de categorías. \n",
 
                 "¡Felicidades!\n" +
                         "Ya sabes cómo utilizar la applicación. Ahora puedes elegir cualquier tutorial de las aplicaciones que desee."
@@ -101,9 +104,12 @@
                 }
             }
 
-            guideOverlay.setOnClickListener {
-                guideOverlay.visibility = View.GONE
-            }
+            guideOverlay.visibility = View.VISIBLE
+            currentStep = 0
+            updateGuideStep()
+            //guideOverlay.setOnClickListener {
+            //    guideOverlay.visibility = View.GONE
+            //}
 
         }
     }
@@ -114,8 +120,8 @@
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> BlankFragment() // Puedes renombrar y personalizar luego
-                1 -> BlankFragment()
+                0 -> BlankFragment()
+                1 -> SocialFragment()
                 2 -> BlankFragment()
                 else -> BlankFragment()
             }
