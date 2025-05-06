@@ -4,8 +4,9 @@ public class Post {
 
         private int id;
         private String username;
-        private String image;
         private String caption;
+        private String image;
+
 
         public Post(int id, String username, String image, String caption) {
             this.id = id;

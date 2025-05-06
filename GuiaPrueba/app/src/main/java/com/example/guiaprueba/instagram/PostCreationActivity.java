@@ -1,13 +1,8 @@
 package com.example.guiaprueba.instagram;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -31,7 +26,6 @@ public class PostCreationActivity extends AppCompatActivity {
 
     private ImageView imagePreview;
     private EditText captionInput;
-    private Uri imageUri;
     private static final String FILE_NAME = "posts.json";
 
     @Override
@@ -43,10 +37,19 @@ public class PostCreationActivity extends AppCompatActivity {
         captionInput = findViewById(R.id.captionInput);
         Button saveButton = findViewById(R.id.saveButton);
 
-        String uriString = getIntent().getStringExtra("imageUri");
-        if (uriString != null) {
-            imageUri = Uri.parse(uriString);
-            imagePreview.setImageURI(imageUri);
+        // Recibir el nombre de la imagen desde la intent
+        String imageName = getIntent().getStringExtra("imageName");
+        if (imageName != null) {
+            String assetPath = "file:///android_asset/gallery_images/" + imageName;
+
+            // Cargar la imagen desde los assets
+            try (InputStream is = getAssets().open("gallery_images/" + imageName)) {
+                Bitmap bitmap = android.graphics.BitmapFactory.decodeStream(is);
+                imagePreview.setImageBitmap(bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "No se pudo cargar la imagen", Toast.LENGTH_SHORT).show();
+            }
         }
 
         saveButton.setOnClickListener(v -> savePost());
@@ -56,54 +59,50 @@ public class PostCreationActivity extends AppCompatActivity {
         String caption = captionInput.getText().toString();
         String username = "guest"; // Valor fijo
 
-        if (imageUri == null || caption.isEmpty()) {
-            Toast.makeText(this, "Selecciona una imagen y escribe un caption.", Toast.LENGTH_SHORT).show();
+        if (caption.isEmpty()) {
+            Toast.makeText(this, "Escribe un caption.", Toast.LENGTH_SHORT).show();
             return;
         }
 
         try {
-            // Guardar imagen en almacenamiento interno
-            String imageFileName = "img_" + System.currentTimeMillis() + ".jpg";
-            File imageFile = new File(getFilesDir(), imageFileName);
-            try (InputStream inputStream = getContentResolver().openInputStream(imageUri);
-                 OutputStream outputStream = new FileOutputStream(imageFile)) {
-                byte[] buffer = new byte[4096];
-                int length;
-                while ((length = inputStream.read(buffer)) > 0) {
-                    outputStream.write(buffer, 0, length);
-                }
-            }
+            // Solo copiar la dirección de la imagen, no guardar la imagen
+            String imageFileName = getIntent().getStringExtra("imageName").replace(".jpg", ""); // Eliminar la extensión .jpg
 
-            // Cargar y actualizar JSON
+            // Cargar y actualizar el JSON
             File jsonFile = new File(getFilesDir(), FILE_NAME);
             Gson gson = new Gson();
             List<Post> postList;
 
             if (jsonFile.exists()) {
-                InputStream inputStream = openFileInput(FILE_NAME);
+                InputStream inputStreamJson = openFileInput(FILE_NAME);
                 Type listType = new TypeToken<List<Post>>() {}.getType();
-                postList = gson.fromJson(new java.util.Scanner(inputStream).useDelimiter("\\A").next(), listType);
-                inputStream.close();
+                postList = gson.fromJson(new java.util.Scanner(inputStreamJson).useDelimiter("\\A").next(), listType);
+                inputStreamJson.close();
             } else {
                 postList = new ArrayList<>();
             }
 
-            // Crear post
+            // Crear un nuevo post con el orden correcto de los parámetros
             int newId = postList.isEmpty() ? 1 : postList.get(postList.size() - 1).getId() + 1;
-            Post newPost = new Post(newId, username, caption, imageFileName);
+            Post newPost = new Post(newId, username, imageFileName, caption); // Aquí el orden es el correcto: id, username, image, caption
             postList.add(newPost);
 
-            // Guardar JSON
+            // Guardar los datos en el archivo JSON
             try (FileOutputStream fos = openFileOutput(FILE_NAME, MODE_PRIVATE)) {
                 String json = gson.toJson(postList);
                 fos.write(json.getBytes());
             }
 
             Toast.makeText(this, "Post guardado", Toast.LENGTH_SHORT).show();
-            finish();
+
+            // Regresar a la actividad principal (InstagramPrincipalActivity)
+            Intent intent = new Intent(PostCreationActivity.this, InstagramPrincipal.class);
+            startActivity(intent);
+            finish();  // Finalizar esta actividad para evitar que el usuario regrese a esta pantalla al presionar el botón de atrás
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Error al guardar el post", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
