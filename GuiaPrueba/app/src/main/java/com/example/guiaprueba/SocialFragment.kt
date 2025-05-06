@@ -22,6 +22,7 @@ class SocialFragment : Fragment() {
         btnTutorial.setOnClickListener {
             Toast.makeText(context, "Iniciando tutorial de Instagram...", Toast.LENGTH_SHORT).show()
             val intent = Intent(requireActivity(), InstagramPrincipal::class.java)
+            intent.putExtra("userId", 1)
             startActivity(intent)
         }
 

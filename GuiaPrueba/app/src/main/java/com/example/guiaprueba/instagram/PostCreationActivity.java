@@ -3,14 +3,21 @@ package com.example.guiaprueba.instagram;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.guiaprueba.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -27,7 +34,14 @@ public class PostCreationActivity extends AppCompatActivity {
     private ImageView imagePreview;
     private EditText captionInput;
     private static final String FILE_NAME = "posts.json";
-
+    private View guideOverlay;
+    private TextView guideText;
+    private ImageButton btnClose, btnBack, btnNext;
+    private int currentStep = 0;
+    private final String[] guideSteps = {
+            "Estas a un paso de poder realizar tu publicación, para ello debes agregar un comentraio. " ,
+            "Para finalizar debes darle al botón publicar, este publicará tu imagen y podrás verla en el menú principal."
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +50,7 @@ public class PostCreationActivity extends AppCompatActivity {
         imagePreview = findViewById(R.id.imagePreview);
         captionInput = findViewById(R.id.captionInput);
         Button saveButton = findViewById(R.id.saveButton);
-
+        showGuide();
         // Recibir el nombre de la imagen desde la intent
         String imageName = getIntent().getStringExtra("imageName");
         if (imageName != null) {
@@ -57,7 +71,7 @@ public class PostCreationActivity extends AppCompatActivity {
 
     private void savePost() {
         String caption = captionInput.getText().toString();
-        String username = "guest"; // Valor fijo
+        String username = "Tú"; // Valor fijo
 
         if (caption.isEmpty()) {
             Toast.makeText(this, "Escribe un caption.", Toast.LENGTH_SHORT).show();
@@ -103,6 +117,49 @@ public class PostCreationActivity extends AppCompatActivity {
             e.printStackTrace();
             Toast.makeText(this, "Error al guardar el post", Toast.LENGTH_SHORT).show();
         }
+    }
+    private void showGuide() {
+        FrameLayout rootLayout = findViewById(android.R.id.content);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        guideOverlay = inflater.inflate(R.layout.layout_guide_overlay, rootLayout, false);
+
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+        params.topMargin = 1000;
+        guideOverlay.setLayoutParams(params);
+
+        rootLayout.addView(guideOverlay);
+
+        guideText = guideOverlay.findViewById(R.id.guideText);
+        btnClose = guideOverlay.findViewById(R.id.btnClose);
+        btnBack = guideOverlay.findViewById(R.id.btnBack);
+        btnNext = guideOverlay.findViewById(R.id.btnNext);
+
+        updateStep();
+
+        btnClose.setOnClickListener(v -> guideOverlay.setVisibility(View.GONE));
+        btnBack.setOnClickListener(v -> {
+            if (currentStep > 0) {
+                currentStep--;
+                updateStep();
+            }
+        });
+        btnNext.setOnClickListener(v -> {
+            if (currentStep < guideSteps.length - 1) {
+                currentStep++;
+                updateStep();
+            }
+        });
+
+        guideOverlay.setVisibility(View.VISIBLE);
+    }
+    private void updateStep() {
+        guideText.setText(guideSteps[currentStep]);
+        btnBack.setVisibility(currentStep == 0 ? View.GONE : View.VISIBLE);
+        btnNext.setVisibility(currentStep == guideSteps.length - 1 ? View.GONE : View.VISIBLE);
     }
 
 }

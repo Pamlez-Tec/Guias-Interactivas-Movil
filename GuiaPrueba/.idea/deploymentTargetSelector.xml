@@ -2,18 +2,9 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="WelcomeActivity">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-<<<<<<< Updated upstream
-      <SelectionState runConfigName="All Tests">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-=======
->>>>>>> Stashed changes
     </selectionStates>
   </component>
 </project>
