@@ -1,6 +1,8 @@
 package com.example.guiaprueba.instagram;
 
 import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.guiaprueba.R;
 
+import java.io.File;
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
@@ -20,7 +23,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     private List<Post> postList;
 
     public PostAdapter(Context context, List<Post> postList) {
-
         this.context = context;
         this.postList = postList;
     }
@@ -37,16 +39,36 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.textUsername.setText(post.getUsername());
         holder.textCaption.setText(post.getCaption());
 
+        String imageName = post.getImage(); // Asumimos que es el nombre de la imagen
+
+        // Primero intentamos cargar la imagen desde recursos 'drawable'
         int imageResId = context.getResources().getIdentifier(
-                post.getImage().replace(".jpg", ""),
+                imageName.replace(".jpg", ""),
                 "drawable",
                 context.getPackageName()
         );
 
-        Glide.with(context)
-                .load(imageResId)
-                .placeholder(R.drawable.placeholder)
-                .into(holder.imagePost);
+        if (imageResId != 0) {
+            // Si la imagen está en drawable
+            Glide.with(context)
+                    .load(imageResId)
+                    .placeholder(R.drawable.placeholder)
+                    .into(holder.imagePost);
+        } else {
+            // Si no está en drawable, intentamos cargarla desde el almacenamiento interno
+
+            File imageFile = new File(context.getFilesDir(), imageName);
+            Log.d("Image Path", "Ruta del archivo: " + imageFile.getAbsolutePath());
+            if (imageFile.exists()) {
+                Glide.with(context)
+                        .load(Uri.fromFile(imageFile))
+                        .placeholder(R.drawable.placeholder)
+                        .into(holder.imagePost);
+            } else {
+                // Si no encontramos el archivo, mostramos el placeholder
+                holder.imagePost.setImageResource(R.drawable.placeholder);
+            }
+        }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.guiaprueba.instagram;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -56,7 +57,8 @@ public class InstagramPrincipal extends AppCompatActivity {
                 // Acción para "Buscar"
                 return true;
             } else if (itemId == R.id.nav_add) {
-                // Acción para "Añadir"
+                Intent intent = new Intent(InstagramPrincipal.this, GalleryActivity.class);
+                startActivity(intent);
                 return true;
             } else if (itemId == R.id.nav_notifications) {
                 // Acción para "Notificaciones"

@@ -13,9 +13,9 @@ class WelcomeActivity : AppCompatActivity() {
 
         val btnIngresar = findViewById<Button>(R.id.btnIngresar)
         btnIngresar.setOnClickListener {
-            //val intent = Intent(this, InstagramPrincipal::class.java)
-            //startActivity(intent)
-            startActivity(Intent(this, AppTypeSelectionActivity::class.java))
+            val intent = Intent(this, InstagramPrincipal::class.java)
+            startActivity(intent)
+            //startActivity(Intent(this, AppTypeSelectionActivity::class.java))
             finish()
         }
     }
