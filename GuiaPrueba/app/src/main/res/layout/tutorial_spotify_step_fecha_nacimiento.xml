@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuál es tu fecha de nacimiento?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Línea con los tres campos: Día / Mes / Año -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Día"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:backgroundTint="#1DB954"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Mes"
+                android:inputType="textCapWords"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:backgroundTint="#1DB954"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Año"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:backgroundTint="#1DB954" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNextFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:backgroundTint="#1DB954"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

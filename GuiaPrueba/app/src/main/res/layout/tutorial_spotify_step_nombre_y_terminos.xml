@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo te llamas?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Campo de nombre -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tu nombre"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#1DB954"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esto aparecerá en tu perfil de Spotify."
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Check obligatorio -->
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acepto los Términos de Uso de Spotify."
+            android:textColor="#FFFFFF"
+            android:buttonTint="#1DB954"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto legal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para obtener más información sobre la manera en que Spotify recopila, usa, comparte y protege tus datos personales, consulta la Política de Privacidad de Spotify."
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Opciones de publicidad -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prefiero no recibir publicidad de Spotify."
+                android:textColor="#FFFFFF"
+                android:buttonTint="#1DB954"
+                android:layout_marginBottom="12dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acepto compartir los datos de mi registro con los proveedores de contenido de Spotify para fines publicitarios."
+                android:textColor="#FFFFFF"
+                android:buttonTint="#1DB954"
+                android:layout_marginBottom="24dp" />
+        </RadioGroup>
+
+        <!-- Botón continuar -->
+        <Button
+            android:id="@+id/btnNextTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:backgroundTint="#1DB954"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
