@@ -120,7 +120,7 @@
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> BlankFragment()
+                0 -> MusicFragment()
                 1 -> SocialFragment()
                 2 -> BlankFragment()
                 else -> BlankFragment()
