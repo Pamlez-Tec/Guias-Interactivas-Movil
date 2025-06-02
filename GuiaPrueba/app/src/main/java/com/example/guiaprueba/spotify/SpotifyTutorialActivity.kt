@@ -65,7 +65,11 @@ class SpotifyTutorialActivity : AppCompatActivity() {
         }
 
         btnClose.setOnClickListener {
-            overlay.visibility = View.GONE
+            // Ir al menú principal de Spotify
+            val intent = Intent(this, SpotifyTutorialMenuActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
         }
 
         loadStep()
