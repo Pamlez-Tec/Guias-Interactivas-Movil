@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guiaprueba.R
+import android.content.Intent
 
 class SpotifyTutorialActivity : AppCompatActivity() {
 
