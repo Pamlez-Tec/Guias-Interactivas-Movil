@@ -15,10 +15,6 @@ class SpotifyTutorialMenuActivity : AppCompatActivity() {
             startActivity(Intent(this, SpotifyTutorialActivity::class.java))
         }
 
-        findViewById<Button>(R.id.btnTutorialBiblioteca).setOnClickListener {
-            // más adelante
-        }
-
         findViewById<Button>(R.id.btnSalir).setOnClickListener {
             finish()
         }
@@ -26,6 +22,11 @@ class SpotifyTutorialMenuActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnTutorialBiblioteca).setOnClickListener {
             startActivity(Intent(this, SpotifyTutorialLibraryActivity::class.java))
         }
+
+        findViewById<Button>(R.id.btnTutorialPlaylist).setOnClickListener {
+            startActivity(Intent(this, SpotifyTutorialPlaylistActivity::class.java))
+        }
+
 
     }
 }

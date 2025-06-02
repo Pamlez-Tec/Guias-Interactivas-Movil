@@ -31,7 +31,7 @@
         <activity android:name=".spotify.SpotifyTutorialActivity" />
         <activity android:name=".spotify.SpotifyTutorialMenuActivity" />
         <activity android:name=".spotify.SpotifyTutorialLibraryActivity" />
-
+        <activity android:name=".spotify.SpotifyTutorialPlaylistActivity" />
 
     </application>
 
