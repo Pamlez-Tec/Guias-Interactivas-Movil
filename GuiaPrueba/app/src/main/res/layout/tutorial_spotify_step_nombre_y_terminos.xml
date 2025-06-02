@@ -16,16 +16,18 @@
             android:layout_height="wrap_content"
             android:text="¿Cómo te llamas?"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
         <!-- Campo de nombre -->
         <EditText
+            android:id="@+id/editNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tu nombre"
             android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:textColorHint="#AAAAAA"
             android:backgroundTint="#1DB954"
             android:layout_marginBottom="8dp" />
@@ -40,10 +42,12 @@
 
         <!-- Check obligatorio -->
         <CheckBox
+            android:id="@+id/checkTerminos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Acepto los Términos de Uso de Spotify."
             android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:buttonTint="#1DB954"
             android:layout_marginBottom="16dp" />
 
@@ -85,6 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"
+            android:textSize="20sp"
             android:backgroundTint="#1DB954"
             android:textColor="#FFFFFF" />
     </LinearLayout>

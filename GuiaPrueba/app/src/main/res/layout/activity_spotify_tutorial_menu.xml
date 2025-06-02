@@ -11,14 +11,14 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spotify"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginBottom="32dp" />
@@ -31,6 +31,7 @@
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
         android:backgroundTint="#FFFFFF"
+        android:textSize="22sp"
         android:textColor="#000000"
         android:layout_marginBottom="16dp" />
 
@@ -38,10 +39,11 @@
         android:id="@+id/btnTutorialBiblioteca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añadir música a tu biblioteca"
+        android:text="Añadir música a tu biblioteca, desde la página de inicio"
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
         android:backgroundTint="#FFFFFF"
+        android:textSize="22sp"
         android:textColor="#000000"
         android:layout_marginBottom="16dp" />
 
@@ -49,10 +51,11 @@
         android:id="@+id/btnTutorialPlaylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crear una nueva playlist"
+        android:text="Crear una nueva lista de reproducción"
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
         android:backgroundTint="#FFFFFF"
+        android:textSize="22sp"
         android:textColor="#000000" />
 
     <Button
@@ -63,5 +66,6 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="#000000"
         android:textColor="#FFFFFF"
+        android:textSize="30sp"
         android:layout_gravity="center" />
 </LinearLayout>

@@ -15,16 +15,18 @@
             android:layout_height="wrap_content"
             android:text="Crea una contraseña"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Debe tener al menos 10 caracteres"
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
+            android:textSize="20sp"
             android:textColorHint="#AAAAAA"
             android:backgroundTint="#1DB954"
             android:layout_marginBottom="16dp" />
@@ -34,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="✔ Usa letras, números o símbolos."
             android:textColor="#BBBBBB"
-            android:textSize="14sp"
+            android:textSize="18sp"
             android:layout_marginBottom="24dp" />
 
         <Button
@@ -43,6 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Siguiente"
             android:backgroundTint="#1DB954"
+            android:textSize="20sp"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 </ScrollView>

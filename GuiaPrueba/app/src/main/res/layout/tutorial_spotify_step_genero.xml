@@ -15,21 +15,23 @@
             android:layout_height="wrap_content"
             android:text="¿Cuál es tu género?"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
 
-        <!-- Botones simulando radio options -->
         <RadioGroup
+            android:id="@+id/radioGroupGenero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mujer"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:buttonTint="#1DB954"
                 android:layout_marginBottom="12dp" />
 
@@ -38,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hombre"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:buttonTint="#1DB954"
                 android:layout_marginBottom="12dp" />
 
@@ -46,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="No binario"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:buttonTint="#1DB954"
                 android:layout_marginBottom="12dp" />
 
@@ -54,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="Prefiero no decirlo"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:buttonTint="#1DB954"
                 android:layout_marginBottom="24dp" />
         </RadioGroup>
@@ -63,6 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"
+            android:textSize="20sp"
             android:backgroundTint="#1DB954"
             android:textColor="#FFFFFF" />
     </LinearLayout>

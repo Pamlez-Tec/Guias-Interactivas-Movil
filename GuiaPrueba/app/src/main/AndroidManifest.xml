@@ -30,6 +30,7 @@
         <activity android:name=".instagram.PostCreationActivity" />
         <activity android:name=".spotify.SpotifyTutorialActivity" />
         <activity android:name=".spotify.SpotifyTutorialMenuActivity" />
+        <activity android:name=".spotify.SpotifyTutorialLibraryActivity" />
 
 
     </application>

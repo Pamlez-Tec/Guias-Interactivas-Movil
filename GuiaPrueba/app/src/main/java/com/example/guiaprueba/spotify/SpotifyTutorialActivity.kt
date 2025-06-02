@@ -29,12 +29,12 @@ class SpotifyTutorialActivity : AppCompatActivity() {
 
     private val guideTexts = listOf(
         "Presione 'Registrarte gratis' para iniciar el proceso.",
-        "Seleccione su método de registro (email o Google).",
-        "Ingrese su correo electrónico.",
-        "Cree una contraseña segura.",
+        "Seleccione su método de registro, en este caso seleccione 'Correo'.",
+        "Encima del botón 'Siguiente', ingrese su correo electrónico.",
+        "Cree una contraseña segura. Debe tener 10 letras o números.",
         "Seleccione su fecha de nacimiento.",
         "Seleccione su género.",
-        "Escriba su nombre y acepte los términos y condiciones.",
+        "Escriba su nombre y acepte los términos y condiciones que aparecen debajo del nombre elegido.",
         "Presione 'Crear cuenta' para finalizar el registro."
     )
 
@@ -88,24 +88,96 @@ class SpotifyTutorialActivity : AppCompatActivity() {
             }
             2 -> {
                 val btn = view.findViewById<Button>(R.id.btnNextEmail)
-                btn?.setOnClickListener { btnNext.performClick() }
+                val editEmail = view.findViewById<EditText>(R.id.editEmail)
+
+                btn?.setOnClickListener {
+                    val emailText = editEmail?.text.toString().trim()
+                    val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+".toRegex()
+
+                    when {
+                        emailText.isEmpty() -> {
+                            Toast.makeText(this, "Por favor ingresa tu correo.", Toast.LENGTH_SHORT).show()
+                        }
+                        !emailText.matches(emailPattern) -> {
+                            Toast.makeText(this, "Formato de correo inválido.", Toast.LENGTH_SHORT).show()
+                        }
+                        else -> {
+                            btnNext.performClick()
+                        }
+                    }
+                }
             }
             3 -> {
                 val btn = view.findViewById<Button>(R.id.btnNextPass)
-                btn?.setOnClickListener { btnNext.performClick() }
+                val editPass = view.findViewById<EditText>(R.id.editPassword)
+
+                btn?.setOnClickListener {
+                    val passText = editPass?.text.toString()
+
+                    if (passText.length < 10) {
+                        Toast.makeText(this, "La contraseña debe tener al menos 10 caracteres.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        btnNext.performClick()
+                    }
+                }
             }
             4 -> {
                 val btn = view.findViewById<Button>(R.id.btnNextFecha)
-                btn?.setOnClickListener { btnNext.performClick() }
+                val editDia = view.findViewById<EditText>(R.id.editDia)
+                val editMes = view.findViewById<EditText>(R.id.editMes)
+                val editAnio = view.findViewById<EditText>(R.id.editAnio)
+
+                btn?.setOnClickListener {
+                    val dia = editDia?.text.toString()
+                    val mes = editMes?.text.toString()
+                    val anio = editAnio?.text.toString()
+
+                    if (dia.length != 2 || mes.length != 2 || anio.length != 4) {
+                        Toast.makeText(this, "Por favor ingrese una fecha válida (DD/MM/AAAA).", Toast.LENGTH_LONG).show()
+                    } else {
+                        btnNext.performClick()
+                    }
+                }
             }
+
             5 -> {
                 val btn = view.findViewById<Button>(R.id.btnNextGenero)
-                btn?.setOnClickListener { btnNext.performClick() }
+                val radioGroup = view.findViewById<RadioGroup>(R.id.radioGroupGenero)
+
+                btn?.setOnClickListener {
+                    val selectedId = radioGroup?.checkedRadioButtonId
+
+                    if (selectedId == -1) {
+                        Toast.makeText(this, "Por favor selecciona una opción.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        btnNext.performClick()
+                    }
+                }
             }
+
             6 -> {
                 val btn = view.findViewById<Button>(R.id.btnNextTerminos)
-                btn?.setOnClickListener { btnNext.performClick() }
+                val editNombre = view.findViewById<EditText>(R.id.editNombre)
+                val checkTerminos = view.findViewById<CheckBox>(R.id.checkTerminos)
+
+                btn?.setOnClickListener {
+                    val nombre = editNombre?.text.toString().trim()
+                    val aceptaTerminos = checkTerminos?.isChecked == true
+
+                    when {
+                        nombre.isEmpty() -> {
+                            Toast.makeText(this, "Por favor ingresa tu nombre.", Toast.LENGTH_SHORT).show()
+                        }
+                        !aceptaTerminos -> {
+                            Toast.makeText(this, "Debes aceptar los Términos de Uso para continuar.", Toast.LENGTH_SHORT).show()
+                        }
+                        else -> {
+                            btnNext.performClick()
+                        }
+                    }
+                }
             }
+
             7 -> {
                 val btn = view.findViewById<Button>(R.id.btnCrearCuenta)
                 btn?.setOnClickListener {

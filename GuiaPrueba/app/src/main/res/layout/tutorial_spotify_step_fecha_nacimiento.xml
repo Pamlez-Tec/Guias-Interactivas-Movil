@@ -15,11 +15,10 @@
             android:layout_height="wrap_content"
             android:text="¿Cuál es tu fecha de nacimiento?"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
 
-        <!-- Línea con los tres campos: Día / Mes / Año -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,34 +26,43 @@
             android:layout_marginBottom="24dp">
 
             <EditText
+                android:id="@+id/editDia"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Día"
+                android:hint="Día: DD"
                 android:inputType="number"
+                android:maxLength="2"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:textColorHint="#AAAAAA"
                 android:backgroundTint="#1DB954"
                 android:layout_marginEnd="8dp" />
 
             <EditText
+                android:id="@+id/editMes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Mes"
-                android:inputType="textCapWords"
+                android:hint="Mes: MM"
+                android:inputType="number"
+                android:maxLength="2"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:textColorHint="#AAAAAA"
                 android:backgroundTint="#1DB954"
                 android:layout_marginEnd="8dp" />
 
             <EditText
+                android:id="@+id/editAnio"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Año"
+                android:hint="Año: AAAA"
                 android:inputType="number"
+                android:maxLength="4"
                 android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:textColorHint="#AAAAAA"
                 android:backgroundTint="#1DB954" />
         </LinearLayout>
@@ -64,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"
+            android:textSize="20sp"
             android:backgroundTint="#1DB954"
             android:textColor="#FFFFFF" />
     </LinearLayout>

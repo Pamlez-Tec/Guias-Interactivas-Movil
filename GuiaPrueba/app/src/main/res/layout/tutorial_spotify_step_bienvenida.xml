@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Millones de canciones.\nGratis en Spotify."
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:gravity="center"
@@ -25,6 +25,7 @@
         android:text="Registrarte gratis"
         android:backgroundTint="#1DB954"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         android:layout_marginBottom="12dp" />
 
     <Button
@@ -32,5 +33,6 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
         android:backgroundTint="#333333"
+        android:textSize="20sp"
         android:textColor="#FFFFFF" />
 </LinearLayout>
