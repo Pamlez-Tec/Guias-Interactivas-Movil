@@ -1,4 +1,4 @@
-package com.example.guiaprueba.spotify
+package com.example.guiaprueba.uber
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ class UberTutorialMenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_spotify_tutorial_menu)
 
         findViewById<Button>(R.id.btnTutorialRegistro).setOnClickListener {
-            startActivity(Intent(this, SpotifyTutorialActivity::class.java))
+            startActivity(Intent(this, UberTutorialActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnTutorialBiblioteca).setOnClickListener {

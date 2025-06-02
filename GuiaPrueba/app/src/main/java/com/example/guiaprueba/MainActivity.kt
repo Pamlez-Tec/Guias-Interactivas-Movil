@@ -15,7 +15,7 @@
     import android.widget.Toast
     import android.widget.TextView
     import com.example.guiaprueba.spotify.MusicFragment
-    
+    import com.example.guiaprueba.uber.TransportFragment
 
 
     class MainActivity : AppCompatActivity() {
@@ -124,7 +124,7 @@
             return when (position) {
                 0 -> MusicFragment()
                 1 -> SocialFragment()
-                2 -> BlankFragment()
+                2 -> TransportFragment()
                 else -> BlankFragment()
             }
         }
