@@ -15,7 +15,7 @@ class WelcomeActivity : AppCompatActivity() {
         btnIngresar.setOnClickListener {
             //val intent = Intent(this, InstagramPrincipal::class.java)
             //startActivity(intent)
-            startActivity(Intent(this, AppTypeSelectionActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
