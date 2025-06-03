@@ -17,10 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#F8F0FF"
-            android:theme="@style/ThemeOverlay.Material3.Light"
-            app:title="Guía Aplicaciones"
-            app:titleCentered="true">
+            android:theme="@style/ThemeOverlay.Material3.Light">
 
+            <TextView
+                android:id="@+id/customToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guía Aplicaciones"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <!-- Botones derecha -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -37,22 +46,13 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_help" />
 
-                <ImageButton
-                    android:id="@+id/btnProfile"
-                    android:layout_width="49dp"
-                    android:layout_height="38dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Perfil"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_account" />
-
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="72dp"
             app:tabIndicatorColor="@color/purple_700"
             app:tabIndicatorFullWidth="false"
             app:tabTextColor="@android:color/darker_gray"
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:textSize="16sp"
+                android:textSize="22sp"
                 android:text="Texto del tutorial"
                 android:lineSpacingExtra="4dp" />
 
