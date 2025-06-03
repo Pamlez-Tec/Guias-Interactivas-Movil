@@ -16,6 +16,7 @@ class FacebookTutorialMenuActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnVerNotificaciones).setOnClickListener {
+            startActivity(Intent(this, FacebookTutorialNotificationsActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnSalir).setOnClickListener {

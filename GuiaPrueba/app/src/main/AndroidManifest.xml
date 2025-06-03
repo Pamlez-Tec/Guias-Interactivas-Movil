@@ -38,6 +38,7 @@
 
         <activity android:name=".facebook.FacebookTutorialMenuActivity" />
         <activity android:name=".facebook.FacebookTutorialAddFriendActivity" />
+        <activity android:name=".facebook.FacebookTutorialNotificationsActivity" />
 
     </application>
 
