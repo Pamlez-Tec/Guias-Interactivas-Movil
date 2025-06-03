@@ -4,44 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="top">
+    android:paddingTop="0dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="16dp"
+    android:background="#F9F6FF">
 
-    <!-- Contenedor horizontal -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="16dp">
+        android:padding="8dp">
 
-        <!-- Logo a la izquierda -->
         <ImageView
             android:id="@+id/instagramLogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_instagram_logo"
-            android:contentDescription="Logo de Instagram"
-            android:layout_marginEnd="16dp" />
+            android:contentDescription="Logo de Instagram" />
 
-        <!-- Nombre en el centro -->
         <TextView
             android:id="@+id/instagramName"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Instagram"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:gravity="center" />
+            android:paddingStart="16dp" />
 
-        <!-- Botón a la derecha -->
         <Button
             android:id="@+id/btnTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tutorial" />
-
+            android:text="Tutorial"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 </LinearLayout>
