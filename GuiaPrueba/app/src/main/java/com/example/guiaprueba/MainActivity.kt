@@ -72,8 +72,9 @@
                 "En caso de que haya presionado sin querer el botón para avanzar el tutorial, puede volver al mensaje anterior " +
                         "al presionar la flecha que está en la parte inferior izquierda.",
 
-                "Los tutoriales solamente aparecerán una vez, esto le permetirá probar libremente las funciones que simula la app, " +
-                        "si desea volver a ver el tutorial de la sección en la que se encuentra, presione el botón de signo de pregunta.",
+                "Los tutoriales solamente aparecerán una vez, esto le permetirá probar libremente las funciones que simula la app. " +
+                        "Si desea volver a ver el tutorial de la sección en la que se encuentra, presione el botón de signo de pregunta."+
+                        "En caso de querer cerrar el tutorial, presione la equis.",
 
                 "Organizamos los tutoriales en categorías que le ayudarán a encontrar más fácilmente el que desea realizar, para " +
                         "elegir una categoría debe presionar el nombre que se encuentra en la barra de categorías. \n",
