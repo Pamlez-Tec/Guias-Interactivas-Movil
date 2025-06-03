@@ -6,13 +6,13 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guiaprueba.R
 
-class UberInfoTutorialActivity : AppCompatActivity() {
+class UberSetPaymentTutorial : AppCompatActivity() {
     private lateinit var tutorialContainer: FrameLayout
     private lateinit var guideText: TextView
     private lateinit var btnNext: ImageButton
@@ -22,19 +22,23 @@ class UberInfoTutorialActivity : AppCompatActivity() {
     private lateinit var progressBar: View
 
     private val stepLayouts = listOf(
-        R.layout.tutorial_uber_step_bienvenida,
-        R.layout.tutorial_uber_step_bienvenida,
-        R.layout.tutorial_uber_step_registro,
-        R.layout.tutorial_uber_step_registro,
-        R.layout.tutorial_uber_step_activating_location
-    )
+        R.layout.tutorial_uber_step3_pedir_viaje,
+        R.layout.tutorial_uber_step3_pedir_viaje,
+        R.layout.tutorial_uber_step1_elegir_metodo_pago,
+        R.layout.tutorial_uber_step1_elegir_metodo_pago,
+        R.layout.tutorial_uber_step2_elegir_metodo_pago,
+        R.layout.tutorial_uber_step2_elegir_metodo_pago,
+        R.layout.tutorial_uber_step4_pedir_viaje,
+        )
 
     private val guideTexts = listOf(
-        "Bienvenido al tutorial de cómo usar Uber.",
-        "Iniciaremos la aplicación presionando el botón Get Started",
-        "Acá entraremos en el área de registro. Podemos observar que hay distintas opciones a seleccionar",
-        "En este caso, lo que haremos es asignar un número telefónico, digita un número telefónico en la parte de arriba y presiona continuar",
-        "Y de esta forma, luego de una carga, finalmente habremos ingresado al sistema, presiona la X en caso de desear salir"
+        "Estabas listo para pedir tu primer uber pero... se te olvidó asignar el pago. Tranquilo, te enseñaremos como hacerlo",
+        "Primero, daremos click a esa opción de Agregar Método de Pago",
+        "Acá, se nos muestra una serie de opciones a escoger como método de pago",
+        "En nuestro caso, escogeremos la de la tarjeta de crédito, tocamos la opcion de Tarjeta de crédito o débito",
+        "Acá observaremos que tenemos para introducir la información de la tarjeta de crédito",
+        "Por ahora, introduciremos un poco de datos ficticios, pero piensa que estás introduciendo tus datos, acá, lo que harás es darle al botón Siguiente",
+        "Y de esta manera es como puedes encargarte de asignar el metodo de pago de forma permanente, para salir presiona la X"
     )
 
     private var currentStep = 0
@@ -87,21 +91,37 @@ class UberInfoTutorialActivity : AppCompatActivity() {
 
     private fun enableStepSpecificActions(view: View) {
         when (currentStep) {
-            1 -> { //Paso de Bienvenida
-                val btn = view.findViewById<LinearLayout>(R.id.btnGetStartedUber)
-                btn?.let {
+            1 -> { //Paso de Accediendo a metodo de pago
+                val creditCardOption = view.findViewById<LinearLayout>(R.id.creditCardOption)
+                creditCardOption?.let {
                     highlightView(it)
                 }
-                btn?.setOnClickListener { btnNext.performClick() }
+                creditCardOption?.setOnClickListener{ btnNext.performClick() }
             }
-            3 -> { //Paso de Registro
-                val phoneInput = view.findViewById<EditText>(R.id.etPhoneNumber)
-                val btn = view.findViewById<LinearLayout>(R.id.btnContinue)
-                phoneInput?.setText("8888-8888")
-                btn?.let {
+            3 -> { //Paso de Seleccionar metodo de pago
+                val creditCardOption = view.findViewById<LinearLayout>(R.id.creditCardOption)
+                creditCardOption?.let {
                     highlightView(it)
                 }
-                btn?.setOnClickListener { btnNext.performClick() }
+                creditCardOption?.setOnClickListener{ btnNext.performClick() }
+            }
+            5 -> { //Paso de rellenar con información los datos y highlight el boton
+                val cardInput = view.findViewById<EditText>(R.id.etCreditCardNumber)
+                var expDate = view.findViewById<EditText>(R.id.etExpirationDate);
+                var cvv = view.findViewById<EditText>(R.id.etCVV);
+                var surname = view.findViewById<EditText>(R.id.surname);
+
+                cardInput?.setText("4111 1111 1111 1111")
+                expDate?.setText("12/28")
+                cvv?.setText("***")
+                surname?.setText("JONATHAN SOFEIFA D")
+
+                val creditCardOption = view.findViewById<LinearLayout>(R.id.buttonContinue)
+                creditCardOption?.let {
+                    highlightView(it)
+                }
+
+                creditCardOption?.setOnClickListener{ btnNext.performClick() }
             }
         }
     }

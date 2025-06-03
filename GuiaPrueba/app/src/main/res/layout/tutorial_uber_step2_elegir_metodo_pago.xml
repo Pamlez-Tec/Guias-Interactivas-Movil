@@ -69,6 +69,7 @@
                     android:src="@drawable/ic_payment_method"
                 />
                 <EditText
+                    android:id="@+id/etCreditCardNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -156,7 +157,7 @@
                         android:focusable="true"
                     >
                         <EditText
-                            android:id="@+id/etExpirationDate"
+                            android:id="@+id/etCVV"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -247,6 +248,7 @@
                     android:focusable="true"
                     >
                     <EditText
+                        android:id="@+id/surname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="ejemplo: nombre en la tarjeta o cuenta"
@@ -257,27 +259,27 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/black_button"
-        android:layout_alignParentBottom="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginVertical="20dp"
-        android:layout_marginHorizontal="10dp"
-        >
-        <TextView
+        <LinearLayout
+            android:id="@+id/buttonContinue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Siguiente"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:textColor="#ffffff"
-            />
+            android:background="@drawable/black_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginVertical="50dp"
+            android:layout_marginHorizontal="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Siguiente"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

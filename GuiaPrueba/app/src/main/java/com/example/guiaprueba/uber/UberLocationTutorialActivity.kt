@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guiaprueba.R
 
-class UberInfoTutorialActivity : AppCompatActivity() {
+class UberLocationTutorialActivity : AppCompatActivity() {
     private lateinit var tutorialContainer: FrameLayout
     private lateinit var guideText: TextView
     private lateinit var btnNext: ImageButton
@@ -22,19 +22,19 @@ class UberInfoTutorialActivity : AppCompatActivity() {
     private lateinit var progressBar: View
 
     private val stepLayouts = listOf(
-        R.layout.tutorial_uber_step_bienvenida,
-        R.layout.tutorial_uber_step_bienvenida,
-        R.layout.tutorial_uber_step_registro,
-        R.layout.tutorial_uber_step_registro,
-        R.layout.tutorial_uber_step_activating_location
+        R.layout.tutorial_uber_step_activating_location,
+        R.layout.tutorial_uber_step_activating_location,
+        R.layout.tutorial_uber_step_activating_location,
+        R.layout.tutorial_uber_step_activating_location,
+        R.layout.tutorial_uber_step1_pedir_viaje
     )
 
     private val guideTexts = listOf(
-        "Bienvenido al tutorial de cómo usar Uber.",
-        "Iniciaremos la aplicación presionando el botón Get Started",
-        "Acá entraremos en el área de registro. Podemos observar que hay distintas opciones a seleccionar",
-        "En este caso, lo que haremos es asignar un número telefónico, digita un número telefónico en la parte de arriba y presiona continuar",
-        "Y de esta forma, luego de una carga, finalmente habremos ingresado al sistema, presiona la X en caso de desear salir"
+        "Ahora, estando acá habrás notado que la aplicación te pide la ubicación",
+        "Para activarlo desde la aplicación, lo que haremos será dar click a esa parte que nos pide que la habilitemos",
+        "Al hacerlo nos saldrá un popup, podemos leerlo, pero basicamente nos está pidiendo permiso de activar la ubicacion",
+        "Presionas el botón de encender en este caso",
+        "Y ahora, nuestra aplicacion tiene la ubicacion activada, un paso menos para poder pedir un Uber"
     )
 
     private var currentStep = 0
@@ -87,21 +87,22 @@ class UberInfoTutorialActivity : AppCompatActivity() {
 
     private fun enableStepSpecificActions(view: View) {
         when (currentStep) {
-            1 -> { //Paso de Bienvenida
-                val btn = view.findViewById<LinearLayout>(R.id.btnGetStartedUber)
-                btn?.let {
-                    highlightView(it)
-                }
-                btn?.setOnClickListener { btnNext.performClick() }
+            1 -> { //Activamos el boton
+                val location = view.findViewById<LinearLayout>(R.id.locationAdvice)
+                location?.setOnClickListener{ btnNext.performClick() }
             }
-            3 -> { //Paso de Registro
-                val phoneInput = view.findViewById<EditText>(R.id.etPhoneNumber)
-                val btn = view.findViewById<LinearLayout>(R.id.btnContinue)
-                phoneInput?.setText("8888-8888")
+            2 -> { //Paso de activar el popup o modal
+                val modal = view.findViewById<FrameLayout>(R.id.locationPopup)
+                modal?.visibility = View.VISIBLE;
+            }
+            3 -> { //Paso de Activar el boton de
+                val modal = view.findViewById<FrameLayout>(R.id.locationPopup)
+                modal?.visibility = View.VISIBLE;
+                val btn = view.findViewById<LinearLayout>(R.id.turnOnLocation)
                 btn?.let {
                     highlightView(it)
+                    it.setOnClickListener { btnNext.performClick() }
                 }
-                btn?.setOnClickListener { btnNext.performClick() }
             }
         }
     }

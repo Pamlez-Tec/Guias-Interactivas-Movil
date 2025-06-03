@@ -39,6 +39,7 @@
 
         <!--Seccion de botones para elegir metodo pago-->
         <LinearLayout
+            android:id="@+id/creditCardOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
