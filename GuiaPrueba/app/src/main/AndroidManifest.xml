@@ -28,6 +28,8 @@
         <activity android:name=".instagram.InstagramPrincipal" android:exported="false" />
         <activity android:name=".instagram.GalleryActivity" />
         <activity android:name=".instagram.PostCreationActivity" />
+        <activity android:name=".instagram.Perfil" />
+        <activity android:name=".instagram.Menu" />
         <activity android:name=".spotify.SpotifyTutorialActivity" />
         <activity android:name=".spotify.SpotifyTutorialMenuActivity" />
         <activity android:name=".spotify.SpotifyTutorialLibraryActivity" />

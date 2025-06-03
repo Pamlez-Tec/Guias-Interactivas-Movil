@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#2A263A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".instagram.Menu"
+    >
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logoinstagram" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:text="Instagram"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:text="Realizar una publicación"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnBloquear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:text="Bloquear a una persona"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnDenunciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="En desarrollo"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textSize="22sp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_gravity="center" />
+</LinearLayout>
