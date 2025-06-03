@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Espaciador superior (barra de estado) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <!-- Barra superior de búsqueda -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F2F5"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="Buscar"
+            app:tint="#606770" />
+
+        <EditText
+            android:id="@+id/editBuscarNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:hint="Buscar en Facebook"
+            android:textColor="#000000"
+            android:textColorHint="#999999"
+            android:textSize="22sp"
+            android:background="@null"
+            android:inputType="textPersonName"/>
+    </LinearLayout>
+
+    <!-- Botón de buscar -->
+    <Button
+        android:id="@+id/btnBuscarAmigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1877F2"/>
+</LinearLayout>

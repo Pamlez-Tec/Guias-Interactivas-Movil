@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Foto de portada -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foto_portada_demo" />
+
+        <!-- Foto de perfil -->
+        <ImageView
+            android:id="@+id/fotoPerfilAmigo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-50dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:padding="2dp" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/nombrePerfilAmigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonia María"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Seguidores -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,9 mil seguidores · 1,8 mil seguidos"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botones Agregar/Mensaje -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnAgregarAmigoFinal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Agregar a amigos"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:backgroundTint="#1877F2"
+                android:drawableStart="@drawable/ic_add_white"
+                android:padding="12dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Mensaje"
+                android:textAllCaps="false"
+                android:backgroundTint="#E4E6EB"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Secciones de navegación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F0F2F5"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Publicaciones"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Información"
+                android:textSize="18sp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Fotos"
+                android:textSize="18sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Detalles -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil · Creador digital"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
+
