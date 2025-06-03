@@ -13,12 +13,13 @@
         <LinearLayout
             android:id="@+id/guideContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#80000000"
+            android:background="#CC000000"
             android:padding="16dp"
-            android:layout_alignParentTop="true"
-        >
+            android:layout_alignParentBottom="true"
+            android:elevation="8dp">
+
                 <ImageButton
                     android:id="@+id/btnClose"
                     android:layout_width="wrap_content"
@@ -26,42 +27,35 @@
                     android:layout_gravity="end"
                     android:background="@android:color/transparent"
                     android:src="@android:drawable/ic_menu_close_clear_cancel"
-                    android:contentDescription="Cerrar tutorial"
-                />
+                    android:contentDescription="Cerrar tutorial" />
+
                 <TextView
                     android:id="@+id/guideText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="16dp"
-                />
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center"
-                >
+                    android:gravity="center">
+
                         <ImageButton
                             android:id="@+id/btnBack"
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@android:drawable/ic_media_previous"
-                            android:contentDescription="Atrás"
-                            android:visibility="gone"
-                        />
+                            android:contentDescription="Atrás" />
+
                         <ImageButton
                             android:id="@+id/btnNext"
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@android:drawable/ic_media_next"
-                            android:contentDescription="Atrás"
-                            android:visibility="gone"
-                        />
+                            android:contentDescription="Siguiente" />
                 </LinearLayout>
-
         </LinearLayout>
-
 </RelativeLayout>

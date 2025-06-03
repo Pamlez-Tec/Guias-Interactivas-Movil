@@ -16,7 +16,7 @@ class UberTutorialMenuActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnTutorialAsignarUbicacion).setOnClickListener {
-            // más adelante
+            startActivity(Intent(this, UberLocationTutorialActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnTutorialPedirUber).setOnClickListener {
@@ -24,7 +24,7 @@ class UberTutorialMenuActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnTutorialPagoUber).setOnClickListener {
-            // más adelante
+            startActivity(Intent(this, UberSetPaymentTutorial::class.java))
         }
 
         findViewById<Button>(R.id.btnSalir).setOnClickListener {

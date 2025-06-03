@@ -34,45 +34,45 @@
                 android:padding="10dp"
                 android:clickable="true"
                 android:focusable="true"
-                >
+            >
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/ic_carro_uber"
                     android:layout_marginHorizontal="10dp"
-                    />
+                />
                 <!--seccion para la info del coche-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
-                        >
+                    >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="UberX"
                             android:textSize="24sp"
                             android:textStyle="bold"
-                            />
+                        />
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/ic_usuario_logo"
                             android:layout_marginLeft="14dp"
-                            />
+                        />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4"
                             android:textSize="16sp"
-                            />
+                        />
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
@@ -85,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:text="CRC 2,945"
                             android:textSize="20sp"
-                            />
+                        />
                     </LinearLayout>
 
                     <TextView
@@ -93,13 +93,13 @@
                         android:layout_height="wrap_content"
                         android:text="4:19 a.m - 2 min"
                         android:textSize="16sp"
-                        />
+                    />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cómodo, viajes todos los días"
                         android:textSize="16sp"
-                        />
+                    />
 
                 </LinearLayout>
             </LinearLayout>
@@ -279,24 +279,32 @@
     >
         <!--Seccion de pago-->
         <LinearLayout
-            android:id="@+id/creditCardOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
         >
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_payment_method"
+                android:src="@drawable/ic_mastercard_logo"
             />
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Agregar método de pago"
+                android:layout_weight="1"
+                android:text="JONATHAN SOFEIFA ....4086"
                 android:textSize="16sp"
                 android:layout_marginLeft="4dp"
+            />
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_right_arrow"
             />
         </LinearLayout>
 
@@ -323,14 +331,13 @@
                     android:textStyle="bold"
                 />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button_ride_mod"
-                android:clickable="true"
-                android:focusable="true"
             >
                 <ImageView
                     android:layout_width="36dp"

@@ -35,6 +35,8 @@
 
         <activity android:name=".uber.UberTutorialMenuActivity" />
         <activity android:name=".uber.UberInfoTutorialActivity" />
+        <activity android:name=".uber.UberLocationTutorialActivity"/>
+        <activity android:name=".uber.UberSetPaymentTutorial" />
 
         <activity android:name=".facebook.FacebookTutorialMenuActivity" />
         <activity android:name=".facebook.FacebookTutorialAddFriendActivity" />
