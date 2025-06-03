@@ -20,7 +20,7 @@ class UberTutorialMenuActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnTutorialPedirUber).setOnClickListener {
-            // más adelante
+            startActivity(Intent(this, UberAskForUberTutorial::class.java))
         }
 
         findViewById<Button>(R.id.btnTutorialPagoUber).setOnClickListener {
