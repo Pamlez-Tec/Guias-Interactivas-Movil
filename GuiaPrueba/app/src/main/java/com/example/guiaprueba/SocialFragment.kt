@@ -26,6 +26,12 @@ class SocialFragment : Fragment() {
             startActivity(intent)
         }
 
+            val btnFacebookTutorial = view.findViewById<Button>(R.id.btnFacebookTutorial)
+            btnFacebookTutorial.setOnClickListener {
+            val intent = Intent(requireContext(), FacebookTutorialMenuActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 }
