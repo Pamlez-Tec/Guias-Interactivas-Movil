@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.guiaprueba.instagram.InstagramPrincipal
+import com.example.guiaprueba.facebook.FacebookTutorialMenuActivity
 
 class SocialFragment : Fragment() {
     override fun onCreateView(
