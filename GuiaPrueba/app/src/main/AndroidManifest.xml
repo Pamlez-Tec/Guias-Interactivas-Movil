@@ -30,8 +30,8 @@
         <activity android:name=".instagram.PostCreationActivity" />
         <activity android:name=".spotify.SpotifyTutorialActivity" />
         <activity android:name=".spotify.SpotifyTutorialMenuActivity" />
-
-
+        <activity android:name=".uber.UberTutorialMenuActivity" />
+        <activity android:name=".uber.UberInfoTutorialActivity" />
     </application>
 
 </manifest>

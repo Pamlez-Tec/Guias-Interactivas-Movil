@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#ffffff"
+>
+
+    <!--Acá haremos un mockup de la parte de registro-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+    >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Introduce tu número telefónico"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="14dp"
+        />
+
+        <!--Seccion Phone Input-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:backgroundTint="#eeeeee"
+        >
+            <!--Button of Country Code -->
+            <Button
+                android:id="@+id/btnCountryCode"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="+506"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFFFF"
+                android:padding="10dp"
+            />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Número de teléfono"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:inputType="phone"
+                android:background="@null"
+            />
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_usuario_logo"
+            />
+        </LinearLayout>
+
+        <!--Divisor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O"
+                android:textColor="#757575"
+                android:textSize="18sp"
+                android:paddingHorizontal="8dp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Continuar"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#000000"
+        />
+
+        <!--Divisor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+        >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O continuar con"
+                android:textColor="#757575"
+                android:textSize="18sp"
+                android:paddingHorizontal="8dp"
+            />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+            />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnContinueGmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Continuar con Google"
+            android:textColor="#282828"
+            android:textSize="18sp"
+            android:backgroundTint="#e8e8e8"
+        />
+
+        <Button
+            android:id="@+id/btnContinueApple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="10dp"
+            android:text="Continuar con Apple"
+            android:textColor="#282828"
+            android:textSize="18sp"
+            android:backgroundTint="#e8e8e8"
+        />
+
+        <Button
+            android:id="@+id/btnContinueEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="10dp"
+            android:text="Continuar con Email"
+            android:textColor="#282828"
+            android:textSize="18sp"
+            android:backgroundTint="#e8e8e8"
+        />
+
+        <!--Divisor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O también puedes"
+                android:textColor="#757575"
+                android:textSize="18sp"
+                android:paddingHorizontal="8dp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+                />
+        </LinearLayout>
+
+        <!-- Seccion busqueda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="6dp"
+        >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_lupa_logo"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Encontrar mi cuenta"
+                android:paddingHorizontal="10dp"
+                android:textColor="#282828"
+                android:textSize="20sp"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
