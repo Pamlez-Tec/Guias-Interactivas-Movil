@@ -16,7 +16,7 @@
     import android.widget.TextView
     import com.example.guiaprueba.spotify.MusicFragment
     import com.example.guiaprueba.uber.TransportFragment
-
+    import android.graphics.Typeface
 
     class MainActivity : AppCompatActivity() {
 
@@ -28,15 +28,11 @@
             setContentView(R.layout.activity_main)
 
             val btnHelp = findViewById<ImageButton>(R.id.btnHelp)
-            val btnProfile = findViewById<ImageButton>(R.id.btnProfile)
 
             btnHelp.setOnClickListener {
                 Toast.makeText(this, "adios", Toast.LENGTH_SHORT).show()
             }
 
-            btnProfile.setOnClickListener {
-                Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show()
-            }
 
             tabLayout = findViewById(R.id.tabLayout)
             viewPager = findViewById(R.id.viewPager)
@@ -46,10 +42,17 @@
 
             val tabTitles = arrayOf("Música", "Redes Sociales", "Transporte")
 
-            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-                tab.text = tabTitles[position]
+          TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+                val customTab = TextView(this).apply {
+                    text = tabTitles[position]
+                    textSize = 20f
+                    setTextColor(resources.getColor(android.R.color.black, null))
+                    setPadding(18, 14, 18, 14)
+                    textAlignment = View.TEXT_ALIGNMENT_CENTER
+                    setTypeface(null, Typeface.BOLD)
+                }
+                tab.customView = customTab
             }.attach()
-
 
             val guideOverlay = findViewById<View>(R.id.guideOverlay)
             val guideText = findViewById<TextView>(R.id.guideText)
