@@ -2,26 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#F3F3F3"
+    android:background="#2A263A"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:src="@drawable/ic_uber_logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_uber_logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Uber"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_gravity="center"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="32dp"
+        android:text="Uber"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnTutorialRegistro"
@@ -32,46 +32,53 @@
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
         android:text="Cómo registrarse en Uber"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btnTutorialAsignarUbicacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Como indicar la ubicación del punto destino y espera"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EFE7E7"
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
-        android:backgroundTint="#EFE7E7"
+        android:text="Cómo indicar la ubicación del punto destino y espera"
         android:textColor="#000000"
-        android:layout_marginBottom="16dp" />
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/btnTutorialPedirUber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cómo solicitar un Uber"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EFE7E7"
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
-        android:backgroundTint="#EFE7E7"
-        android:textColor="#000000" />
+        android:text="Cómo solicitar un Uber"
+        android:textColor="#000000"
+        android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btnTutorialPagoUber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sistema de pago del Uber"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EFE7E7"
         android:drawableEnd="@drawable/ic_play_arrow"
         android:padding="16dp"
-        android:backgroundTint="#EFE7E7"
-        android:textColor="#000000" />
+        android:text="Sistema de pago del Uber"
+        android:textColor="#000000"
+        android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Volver"
+        android:layout_gravity="center"
         android:layout_marginTop="32dp"
         android:backgroundTint="#000000"
+        android:text="Volver"
         android:textColor="#EFE7E7"
-        android:layout_gravity="center" />
+        android:textSize="22sp" />
 </LinearLayout>

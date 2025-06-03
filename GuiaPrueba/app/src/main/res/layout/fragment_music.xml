@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/musicLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="0dp"
-    android:paddingStart="0dp"
-    android:paddingEnd="16dp"
-    android:background="#F9F6FF">
+    android:padding="8dp"
+    android:background="#ECEFF1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height= "60dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="8dp">
+        android:padding="16dp"
+        android:background="#E8F5E9"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:elevation="2dp">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:src="@drawable/ic_spotify_logo"
-            android:contentDescription="Spotify" />
+            android:contentDescription="Spotify"
+            android:layout_marginEnd="12dp" />
 
         <TextView
             android:layout_width="0dp"
@@ -27,8 +31,8 @@
             android:layout_height="wrap_content"
             android:text="Spotify"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:paddingStart="16dp" />
+            android:textColor="#1DB954"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSpotifyTutorial"
@@ -37,7 +41,11 @@
             android:text="Tutorial"
             android:textSize="20sp"
             android:backgroundTint="#1DB954"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:minHeight="56dp"
+            android:minWidth="120dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp" />
     </LinearLayout>
 
 </LinearLayout>

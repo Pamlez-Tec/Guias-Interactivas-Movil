@@ -5,18 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FAF9F6">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F8F0FF">
+        android:background="#ECE6F0">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#F8F0FF"
+            android:layout_height="72dp"
+            android:background="#ECE6F0"
             android:theme="@style/ThemeOverlay.Material3.Light">
 
             <TextView
@@ -24,12 +25,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guía Aplicaciones"
-                android:textColor="#000000"
-                android:textSize="30sp"
+                android:textColor="#2E2E2E"
+                android:textSize="34sp"
                 android:textStyle="bold"
                 android:layout_gravity="center" />
 
-            <!-- Botones derecha -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -39,31 +39,32 @@
 
                 <ImageButton
                     android:id="@+id/btnHelp"
-                    android:layout_width="44dp"
-                    android:layout_height="38dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Ayuda"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_help" />
-
+                    android:src="@drawable/ic_help"
+                    app:tint="#1B5E20" />
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            app:tabIndicatorColor="@color/purple_700"
+            android:layout_height="80dp"
+            android:background="#ECE6F0"
+            app:tabIndicatorColor="#4A148C"
             app:tabIndicatorFullWidth="false"
-            app:tabTextColor="@android:color/darker_gray"
-            app:tabSelectedTextColor="@color/purple_700" />
+            app:tabTextColor="#757575"
+            app:tabSelectedTextColor="#1B5E20"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#ECEFF1"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <FrameLayout
@@ -79,12 +80,11 @@
             android:layout_gravity="center"
             android:layout_margin="32dp"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:background="#B3E5FC"
+            android:padding="24dp"
+            android:background="#FFF3E0"
             android:elevation="8dp"
             android:layout_marginBottom="100dp">
 
-            <!-- Botón de cerrar (X) -->
             <ImageButton
                 android:id="@+id/btnClose"
                 android:layout_width="wrap_content"
@@ -92,22 +92,23 @@
                 android:layout_gravity="end"
                 android:background="@android:color/transparent"
                 android:src="@android:drawable/ic_menu_close_clear_cancel"
-                android:contentDescription="Cerrar tutorial" />
+                android:contentDescription="Cerrar tutorial"
+                app:tint="#D32F2F" />
 
             <TextView
                 android:id="@+id/guideText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="26sp"
                 android:text="Texto del tutorial"
-                android:lineSpacingExtra="4dp" />
+                android:lineSpacingExtra="6dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:weightSum="1">
 
                 <LinearLayout
@@ -123,7 +124,8 @@
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/ic_media_previous"
                         android:contentDescription="Atrás"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        app:tint="#1B5E20" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -138,10 +140,10 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/ic_media_next"
-                        android:contentDescription="Siguiente" />
+                        android:contentDescription="Siguiente"
+                        app:tint="#1B5E20" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

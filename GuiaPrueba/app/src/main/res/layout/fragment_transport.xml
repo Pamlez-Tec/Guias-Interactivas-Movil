@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transportLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="32dp"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:background="#F9F6FF">
+    android:padding="8dp"
+    android:background="#ECEFF1">
 
     <!-- Fila: Spotify -->
     <LinearLayout
@@ -14,30 +13,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="8dp">
+        android:padding="16dp"
+        android:background="#E0E0E0"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp">
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:src="@drawable/ic_uber_logo"
-            android:contentDescription="Uber" />
+            android:contentDescription="Uber"
+            android:layout_marginEnd="12dp" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Uber"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:paddingStart="24dp" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/btnUberTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tutorial"
-            android:backgroundTint="#09091A"
-            android:textColor="#FFFFFF" />
+            android:textSize="20sp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:minHeight="56dp"
+            android:minWidth="120dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp" />
     </LinearLayout>
 
 </LinearLayout>
