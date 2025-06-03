@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/socialLayout"
     android:layout_width="match_parent"
@@ -11,34 +10,72 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="8dp">
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="12dp">
 
         <ImageView
-            android:id="@+id/instagramLogo"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_instagram_logo"
-            android:contentDescription="Logo de Instagram" />
+            android:contentDescription="Logo de Instagram"
+            android:layout_marginEnd="12dp" />
 
         <TextView
-            android:id="@+id/instagramName"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Instagram"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:paddingStart="16dp" />
+            android:textColor="#333333"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tutorial"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:backgroundTint="#A340A3"
+            android:textColor="#FFFFFF"
+            android:minHeight="40dp"
+            android:minWidth="100dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="12dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_facebook_logo"
+            android:contentDescription="Logo de Facebook"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:textSize="25sp"
+            android:textColor="#333333"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnFacebookTutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutorial"
+            android:textSize="20sp"
+            android:backgroundTint="#1877F2"
+            android:textColor="#FFFFFF"
+            android:minHeight="40dp"
+            android:minWidth="100dp" />
+    </LinearLayout>
 </LinearLayout>
