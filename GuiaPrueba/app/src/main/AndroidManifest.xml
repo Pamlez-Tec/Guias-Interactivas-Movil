@@ -33,6 +33,8 @@
         <activity android:name=".spotify.SpotifyTutorialLibraryActivity" />
         <activity android:name=".spotify.SpotifyTutorialPlaylistActivity" />
 
+        <activity android:name=".uber.UberTutorialMenuActivity" />
+        <activity android:name=".uber.UberInfoTutorialActivity" />
     </application>
 
 </manifest>

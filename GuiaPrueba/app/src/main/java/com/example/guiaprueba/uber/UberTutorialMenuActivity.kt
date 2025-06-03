@@ -1,4 +1,4 @@
-package com.example.guiaprueba.spotify
+package com.example.guiaprueba.uber
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,17 +9,21 @@ import com.example.guiaprueba.R
 class UberTutorialMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_spotify_tutorial_menu)
+        setContentView(R.layout.activity_uber_tutorial_menu)
 
         findViewById<Button>(R.id.btnTutorialRegistro).setOnClickListener {
-            startActivity(Intent(this, SpotifyTutorialActivity::class.java))
+            startActivity(Intent(this, UberInfoTutorialActivity::class.java))
         }
 
-        findViewById<Button>(R.id.btnTutorialBiblioteca).setOnClickListener {
+        findViewById<Button>(R.id.btnTutorialAsignarUbicacion).setOnClickListener {
             // más adelante
         }
 
-        findViewById<Button>(R.id.btnTutorialPlaylist).setOnClickListener {
+        findViewById<Button>(R.id.btnTutorialPedirUber).setOnClickListener {
+            // más adelante
+        }
+
+        findViewById<Button>(R.id.btnTutorialPagoUber).setOnClickListener {
             // más adelante
         }
 

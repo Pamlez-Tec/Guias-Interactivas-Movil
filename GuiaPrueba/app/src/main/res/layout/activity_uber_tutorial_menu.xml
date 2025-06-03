@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F3F3F3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/ic_uber_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uber"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnTutorialRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EFE7E7"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:text="Cómo registrarse en Uber"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnTutorialAsignarUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Como indicar la ubicación del punto destino y espera"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:backgroundTint="#EFE7E7"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnTutorialPedirUber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cómo solicitar un Uber"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:backgroundTint="#EFE7E7"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnTutorialPagoUber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistema de pago del Uber"
+        android:drawableEnd="@drawable/ic_play_arrow"
+        android:padding="16dp"
+        android:backgroundTint="#EFE7E7"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:textColor="#EFE7E7"
+        android:layout_gravity="center" />
+</LinearLayout>
