@@ -26,7 +26,7 @@ class FacebookTutorialNotificationsActivity : AppCompatActivity() {
     )
 
     private val guideTexts = listOf(
-        "En la página principal. Presione el botón en forma de campana, en la parte de superior, para ver las notificaciones.",
+        "En la página principal. Presione el botón en forma de campana, en la parte superior, para ver las notificaciones.",
         "Aquí puede ver sus notificaciones. Presione la primera notificación, la de Ana, para ver su contenido.",
         "Aquí puede ver tanto su publicación como el comentario de Ana. Fin del tutorial, para salir presione la X."
     )

@@ -25,11 +25,11 @@ class SpotifyTutorialPlaylistActivity : AppCompatActivity() {
     )
 
     private val guideTexts = listOf(
-        "Presione el ícono + en la esquina superior, a la par de la lupa, para crear una lista de reproducción.",
-        "Selecciona 'Playlist' para continuar.",
-        "Escriba un nombre para su lista de reproducción y presiona 'Crear'.",
+        "Estando en su biblioteca. Presione el ícono + en la esquina superior, a la par de la lupa, para crear una lista de reproducción.",
+        "Seleccione 'Playlist' para continuar.",
+        "Escriba un nombre para su lista de reproducción y presione 'Crear'.",
         "Su nueva lista de reproducción se ha creado. Presione 'Tu biblioteca' en la parte de abajo.",
-        "Aquí se guardará su nueva lista de reproducción. Para salir del tutorial presional al X de este diálogo."
+        "Aquí se guardará su nueva lista de reproducción. Fin del tutorial, para salir presione la X."
     )
 
     private var currentStep = 0

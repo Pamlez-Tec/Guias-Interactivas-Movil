@@ -23,10 +23,10 @@ class FacebookTutorialAddFriendActivity  : AppCompatActivity() {
     )
 
     private val guideTexts = listOf(
-        "En la página principal. Presione el botón en forma de lupa, en la parte de arriba, para buscar a una persona.",
+        "En la página principal. Presione el botón en forma de lupa, en la parte superior, para buscar a una persona.",
         "A la par de la lupa, escriba el nombre del amigo que desea agregar.",
         "Se presentarán varios perfiles. Seleccione a la persona que busca, dando un click en el nombre.",
-        "Presione el botón 'Agregar a amigos' para enviar la solicitud de amistad. Si desea salir del tutorial, presione la X."
+        "Presione el botón 'Agregar a amigos' para enviar la solicitud de amistad. Fin del tutorial, para salir presione la X."
     )
 
     private var currentStep = 0

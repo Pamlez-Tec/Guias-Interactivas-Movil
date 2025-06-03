@@ -28,14 +28,14 @@ class SpotifyTutorialActivity : AppCompatActivity() {
     )
 
     private val guideTexts = listOf(
-        "Presione 'Registrarte gratis' para iniciar el proceso.",
-        "Seleccione su método de registro, en este caso seleccione 'Correo'.",
-        "Encima del botón 'Siguiente', ingrese su correo electrónico.",
-        "Cree una contraseña segura. Debe tener 10 letras o números.",
-        "Seleccione su fecha de nacimiento.",
-        "Seleccione su género.",
+        "Presione el botón 'Registrarte gratis' para iniciar el proceso.",
+        "Seleccione su método de registro, en este caso seleccione 'Correo electrónico'. La primera opción.",
+        "Encima del botón 'Siguiente', escriba su correo electrónico. Revise bien el formato.",
+        "Escriba una contraseña segura. Debe tener 10 letras o números.",
+        "Seleccione su fecha de nacimiento. Debe tener cuidado con el formato, primero va el día con dos números, luego el mes con dos números y de último el año completo, con cuatro números.",
+        "Seleccione su género, dándole click a un círculo hasta que cambie de color a morado.",
         "Escriba su nombre y acepte los términos y condiciones que aparecen debajo del nombre elegido.",
-        "Presione 'Crear cuenta' para finalizar el registro."
+        "Para registrarse completamente debe presionar el botón 'Crear cuenta'. Fin del tutorial, para salir presione la X"
     )
 
     private var currentStep = 0
@@ -182,7 +182,6 @@ class SpotifyTutorialActivity : AppCompatActivity() {
                 val btn = view.findViewById<Button>(R.id.btnCrearCuenta)
                 btn?.setOnClickListener {
                     Toast.makeText(this, "¡Cuenta creada!", Toast.LENGTH_SHORT).show()
-                    finish()
                 }
             }
         }

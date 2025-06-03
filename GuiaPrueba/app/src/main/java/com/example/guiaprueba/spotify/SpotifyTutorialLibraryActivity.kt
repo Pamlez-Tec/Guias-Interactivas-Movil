@@ -22,11 +22,11 @@ class SpotifyTutorialLibraryActivity : AppCompatActivity() {
     )
 
     private val guideTexts = listOf(
-        "Seleccione el artista que más le guste, presionando la foto.",
-        "Presione el botón +, debajo de la foto del artista, para añadirlo a tu biblioteca. El botón + " +
+        "En la página inicial. Seleccione el artista que más le guste, presionando la foto. En este caso presione la primera foto.",
+        "Presione el botón +, debajo de la foto del artista, para añadirlo a su biblioteca. El botón + " +
                 "cambia a verde cuando se hizo correctamente.",
-        "Aquí puedes ver los artistas que añadiste. Y reproducirlos cuando quieras. Para finalizar presiona la " +
-                "X de arriba de este diálogo"
+        "Aquí puedes ver los artistas que añadiste. Y reproducirlos cuando quieras. Fin del tutorial, para salir presione la " +
+                "X."
     )
 
     private var currentStep = 0
