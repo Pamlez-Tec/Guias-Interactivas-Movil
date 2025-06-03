@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
->
+    >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-    >
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -15,38 +15,65 @@
             android:paddingBottom="16dp"
             >
 
-            <!--Seccion habilitar ubicacion-->
+            <!--Seecion rides-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#f5bc2f"
-                android:paddingVertical="10dp"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                >
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_location_logo"
-                    android:layout_marginLeft="6dp"
-                    />
-                <TextView
+                android:layout_marginBottom="20dp"
+            >
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Compartir ubicación deshabilitado. Toca aquí para habilitarlo."
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:padding="10dp"
-                    />
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/ic_right_arrow"
-                    android:layout_marginRight="6dp"
-                    />
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginVertical="10dp"
+                >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_carro_logo"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:text="Viajar"
+                        android:layout_marginLeft="18dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginVertical="10dp"
+                >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_food_logo"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="22sp"
+                        android:text="Comida"
+                        android:layout_marginLeft="18dp"
+                        />
+                </LinearLayout>
+
             </LinearLayout>
+
 
             <!--Seccion Lupa-->
             <LinearLayout
@@ -65,7 +92,7 @@
                     android:src="@drawable/ic_lupa_logo"
                     android:padding="4dp"
                     android:layout_marginLeft="6dp"
-                />
+                    />
                 <EditText
                     android:layout_marginHorizontal="10dp"
                     android:id="@+id/etLocation"
@@ -143,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-            >
+                >
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -154,12 +181,12 @@
                     android:focusable="true"
                     android:layout_marginVertical="10dp"
                     android:background="@drawable/suggestions_layout"
-                >
+                    >
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_carro_logo"
-                    />
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -167,7 +194,7 @@
                         android:text="Viaje"
                         android:textColor="#000000"
                         android:textSize="15sp"
-                    />
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -270,7 +297,7 @@
             android:clickable="true"
             android:focusable="true"
             android:layout_marginVertical="10dp"
-        >
+            >
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -364,115 +391,5 @@
                 />
         </LinearLayout>
     </LinearLayout>
-
-    <!--Modal agregado-->
-    <FrameLayout
-        android:id="@+id/locationPopup"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#CC0f0f0f"
-        android:visibility="gone"
-    >
-        <!--android:visibility="gone"-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/roundstyle"
-            android:padding="24dp"
-            android:layout_margin="26dp"
-        >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Para una mejor experiencia, su dispositivo deberá activar la ubicación precisa."
-                android:textColor="#000"
-                android:textSize="22sp"
-                android:layout_marginBottom="10dp"
-            />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Las siguientes configuraciones deben estar activadas:"
-                android:textColor="#000"
-                android:textSize="18sp"
-            />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-            >
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/ic_location_on_logo"
-                />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ubicación del dispositivo"
-                    android:textSize="14sp"
-                />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/ic_gps_logo"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Precisión de la ubicación: proporciona una ubicación más precisa para aplicaciones y servicios. Para ello, Google procesa periódicamente información sobre los sensores del dispositivo y las señales inalámbricas de este para recopilar colectivamente la ubicación de las señales inalámbricas. Estas se utilizan sin identificarle para mejorar la precisión de la ubicación y los servicios basados ​​en la ubicación, así como para mejorar, proporcionar y mantener los servicios de Google, basándonos en los intereses legítimos de Google y de terceros, para satisfacer las necesidades de los usuarios."
-                    android:textSize="14sp"
-                    />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Puedes cambiar esto en cualquier momento en la configuraciones."
-                android:textSize="14sp"
-            />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="30dp"
-                android:gravity="center_horizontal"
-            >
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/roundbutton"
-                    android:backgroundTint="#e9e7eb"
-                    android:text="No gracias"
-                    android:textSize="16sp"
-                    android:layout_marginHorizontal="10dp"
-                    android:paddingHorizontal="24dp"
-                />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/roundbutton"
-                    android:text="Encender"
-                    android:textSize="16sp"
-                    android:layout_marginHorizontal="10dp"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-    </FrameLayout>
 
 </RelativeLayout>
